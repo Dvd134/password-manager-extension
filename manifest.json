@@ -1,0 +1,40 @@
+{
+
+  "manifest_version": 2,
+  "name": "PW-MNGR",
+  "version": "1.1",
+
+  "description": "Secure password manager",
+  "homepage_url": "https://ism.ase.ro/",
+
+  "icons": {
+    "32": "icons/key-logo-32.png",
+    "48": "icons/ism-logo-48.png",
+    "96": "icons/ism-logo-96.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["ismpwmngr.js"]
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "deacudavid21@stud.ase.ro"
+    }
+  },
+
+  "browser_action": {
+    "default_icon": "icons/ism-logo-48.png",
+    "default_title": "PW-MNGR",
+    "default_popup": "popup/index.html"
+    
+  }
+}
